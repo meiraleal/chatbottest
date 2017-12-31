@@ -32,11 +32,10 @@ require(__dirname + '/components/subscribe_events.js')(controller);
 
 if (process.env.studio_token) {
     controller.on('message_received,facebook_postback', function(bot, message) {
-        console.log(message.text.toLowerCase());
+        console.log("Vai funfar");
         if (message.text.toLowerCase() === "teste") {
-            console.log("funcionou 2");
             bot.reply(message, "Espere um pouco...");
-            bot.reply(message, "Ok! Testado.");
+            setInterval(() => bot.reply(message, "Ok! Testado."), 3000);
         }
     });
 }
