@@ -35,7 +35,7 @@ if (process.env.studio_token) {
         console.log("Vai funfar");
         if (message.text.toLowerCase() === "teste") {
             bot.reply(message, "Espere um pouco...");
-            setInterval(() => bot.reply(message, "Ok! Testado."), 3000);
+            setTimeout(() => bot.reply(message, "Ok! Testado."), 3000);
         }
     });
 }
